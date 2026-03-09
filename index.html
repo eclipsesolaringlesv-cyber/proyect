@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Proyecto Ecobot</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+background:#063306;
+color:white;
+line-height:1.6;
+}
+
+/* INTRO */
+
+#intro{
+position:fixed;
+width:100%;
+height:100vh;
+background:#22ce12;
+display:flex;
+justify-content:center;
+align-items:center;
+z-index:1000;
+transition:transform 1.5s;
+}
+
+.intro-box{
+background:white;
+padding:70px 120px;
+border-radius:20px;
+text-align:center;
+box-shadow:0 8px 25px rgba(0,0,0,0.2);
+}
+
+.intro-box h1{
+font-size:70px;
+color:#333;
+margin-bottom:30px;
+}
+
+.iniciar-btn{
+padding:10px 25px;
+border:none;
+border-radius:20px;
+background:#66ff69;
+color:white;
+cursor:pointer;
+}
+
+/* NAV */
+
+nav{
+background:#111;
+padding:20px 8%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+position:sticky;
+top:0;
+z-index:999;
+}
+
+nav h1{
+color:#00ff40;
+}
+
+nav ul{
+list-style:none;
+display:flex;
+gap:20px;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+}
+
+nav a:hover{
+color:#00ff40;
+}
+
+/* HERO */
+
+.hero{
+padding:120px 10%;
+background:linear-gradient(135deg,#145c24,#2e7a3f);
+text-align:center;
+}
+
+.hero h2{
+font-size:3.2rem;
+margin-bottom:20px;
+}
+
+.hero p{
+max-width:700px;
+margin:auto;
+font-size:1.1rem;
+}
+
+/* SECCIONES */
+
+.section{
+padding:80px 10%;
+}
+
+.section h2{
+text-align:center;
+margin-bottom:40px;
+font-size:2.2rem;
+color:#00ff40;
+}
+
+/* CONTENEDOR TEXTO */
+
+.contenedor{
+background:white;
+color:black;
+padding:40px;
+max-width:900px;
+margin:40px auto;
+border-radius:12px;
+box-shadow:0 10px 25px rgba(0,0,0,0.3);
+}
+
+/* GRID */
+
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:30px;
+}
+
+/* TARJETAS */
+
+.box{
+background:#1c1c1c;
+padding:40px;
+border-radius:20px;
+text-align:center;
+transition:0.4s;
+}
+
+.box:hover{
+transform:scale(1.05);
+background:#00ff4c;
+color:black;
+}
+
+.icon{
+font-size:40px;
+margin-bottom:15px;
+}
+
+/* VIDEO */
+
+.video{
+text-align:center;
+margin-top:30px;
+}
+
+iframe{
+width:100%;
+max-width:700px;
+height:400px;
+border-radius:10px;
+}
+
+/* SCROLL */
+
+.fade{
+opacity:0;
+transform:translateY(40px);
+transition:1s;
+}
+
+.fade.active{
+opacity:1;
+transform:translateY(0);
+}
+
+/* FOOTER */
+
+footer{
+background:#111;
+padding:40px;
+text-align:center;
+margin-top:50px;
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- INTRO -->
+<div id="intro">
+<div class="intro-box">
+<h1>Ecobot</h1>
+<button class="iniciar-btn" onclick="iniciar()">Comenzar</button>
+</div>
+</div>
+
+<!-- NAV -->
+<nav>
+<h1>Ecobot</h1>
+<ul>
+<li><a href="#">Inicio</a></li>
+<li><a href="#problema">Problema</a></li>
+<li><a href="#objetivos">Objetivos</a></li>
+<li><a href="#funciona">Funcionamiento</a></li>
+<li><a href="#propuesta">Propuesta</a></li>
+<li><a href="#contacto">Contacto</a></li>
+</ul>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+<h2>Ecobot</h2>
+<p>Un sistema inteligente para la separación automática de residuos que busca fomentar la cultura del reciclaje y reducir la contaminación ambiental.</p>
+</section>
+
+<!-- PROBLEMA -->
+
+<section class="section" id="problema">
+
+<h2>Problemática Ambiental</h2>
+
+<div class="contenedor">
+
+<p>
+Hoy en día el reciclaje es fundamental para cuidar el medio ambiente. En México el aumento de la población, el consumo excesivo y la mala gestión de los residuos han provocado grandes problemas de contaminación.
+</p>
+
+<p>
+Muchos residuos no se separan correctamente, lo que impide su reciclaje y provoca contaminación del suelo, del agua y del aire. Esto genera problemas de salud, malos olores y proliferación de plagas.
+</p>
+
+<div class="video">
+
+<iframe src="https://packaged-media.redd.it/zz9zxcj2752f1/pb/m2-res_1280p.mp4?m=DASHPlaylist.mpd&v=1&e=1772524800&s=9efaad10d60a63a036c894c702524280e5085919"></iframe>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- OBJETIVOS -->
+
+<section class="section" id="objetivos">
+
+<h2>Objetivos del Proyecto</h2>
+
+<div class="grid">
+
+<div class="box fade">
+<div class="icon">🎯</div>
+<h3>Objetivo General</h3>
+<p>Desarrollar un prototipo de bote inteligente que facilite la separación de residuos.</p>
+</div>
+
+<div class="box fade">
+<div class="icon">♻️</div>
+<h3>Conciencia Ambiental</h3>
+<p>Fomentar la cultura del reciclaje en niños y jóvenes.</p>
+</div>
+
+<div class="box fade">
+<div class="icon">🤖</div>
+<h3>Tecnología</h3>
+<p>Aplicar sensores para identificar materiales reciclables.</p>
+</div>
+
+</div>
+
+</section>
+
+<!-- FUNCIONAMIENTO -->
+
+<section class="section" id="funciona">
+
+<h2>¿Cómo Funciona Ecobot?</h2>
+
+<div class="grid">
+
+<div class="box fade">
+<div class="icon">👁️</div>
+<h3>Detección</h3>
+<p>Los sensores identifican el tipo de material.</p>
+</div>
+
+<div class="box fade">
+<div class="icon">⚙️</div>
+<h3>Clasificación</h3>
+<p>El sistema separa automáticamente los residuos.</p>
+</div>
+
+<div class="box fade">
+<div class="icon">📦</div>
+<h3>Almacenamiento</h3>
+<p>Los materiales quedan organizados para su reciclaje.</p>
+</div>
+
+</div>
+
+</section>
+
+<!-- PROPUESTA -->
+
+<section class="section" id="propuesta">
+
+<h2>Propuesta del Proyecto</h2>
+
+<div class="grid">
+
+<div class="box fade">
+<h3>Cultura</h3>
+<p>Desarrollar hábitos desde pequeños.</p>
+</div>
+
+<div class="box fade">
+<h3>Diseño Ecobot</h3>
+<p>Crear un diseño atractivo y educativo.</p>
+</div>
+
+<div class="box fade">
+<h3>Prototipo</h3>
+<p>Construir un modelo funcional.</p>
+</div>
+
+<div class="box fade">
+<h3>Reciclaje</h3>
+<p>Facilitar la correcta separación de residuos.</p>
+</div>
+
+</div>
+
+</section>
+
+<!-- CONTACTO -->
+
+<section class="section" id="contacto">
+
+<h2>Contacto</h2>
+
+<div class="contenedor">
+<p>Email: ocrz3925@gmail.com</p>
+</div>
+
+</section>
+
+<footer>
+<p>© 2026 Proyecto Ecobot | Innovación Ambiental</p>
+</footer>
+
+<script>
+
+function iniciar(){
+document.getElementById("intro").style.transform="translateY(-100%)";
+
+setTimeout(function(){
+document.getElementById("intro").style.display="none";
+},1500);
+}
+
+const elementos=document.querySelectorAll('.fade');
+
+window.addEventListener('scroll',()=>{
+
+elementos.forEach(el=>{
+
+const posicion=el.getBoundingClientRect().top;
+const alturaPantalla=window.innerHeight;
+
+if(posicion<alturaPantalla-100){
+el.classList.add('active');
+}
+
+});
+
+});
+
+</script>
+
+</body>
+</html>
